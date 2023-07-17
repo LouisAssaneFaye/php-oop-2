@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+div.container{
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(58, 58, 58);
+    padding-top: 0.5rem;
+    
+}
+
+div.card{
+    width: 90%;
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: rgb(173, 173, 173);
+    padding-top: 0.5rem;
+    
+}
+
+div.informations>*{
+    margin-bottom: 1rem;
+}
+
+
+p.informations>*{
+    margin-bottom: 0.5rem;
+}
+
+h3{
+    color: black;
+}
+
+p.informations>span{
+    font-weight: bold;
+    color: black;
+}
+
+div.imagine{
+    width: 90%;
+    object-fit: contain;
+}
+
+img{
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
