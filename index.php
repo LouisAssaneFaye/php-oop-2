@@ -21,7 +21,6 @@ $products=[
     $dogKennel,
     $catBed,
     $plasticBone,
-    $catBed,
 ]
  
 ?>
