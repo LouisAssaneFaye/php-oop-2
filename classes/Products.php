@@ -6,14 +6,12 @@ class Products{
     public $imagine;
     public $title;
     public $priceOnCent;
-    public $type;
 
-    function __construct(String $_category, String $_imagine, String $_title, Int $_priceOnCent, String $_type ){
+    function __construct(String $_category, String $_imagine, String $_title, Int $_priceOnCent ){
         $this->category = $_category;
         $this->imagine = $_imagine;
         $this->title = $_title;
         $this->priceOnCent = $_priceOnCent;
-        $this->type = $_type;
     }
 
     public function getCategory(){
@@ -32,8 +30,40 @@ class Products{
         return $this->title;
     }
 
-    public function getType(){
-        return $this->title;
-    }
+}
 
+class Food extends Products {
+    public $type;
+    public $gramms;
+
+    function __construct(String $type, Int $gramms, String $_category, String $_imagine, String $_title, Int $_priceOnCent){
+        parent ::__construct($_category, $_imagine, $_title, $_priceOnCent);
+        $this->type = $type;
+        $this->gramms = $gramms;
+
+    }
+}
+
+class Toy extends Products {
+    public $type;
+    public $size;
+
+    function __construct(String $type, String $size, String $_category, String $_imagine, String $_title, Int $_priceOnCent){
+        parent ::__construct($_category, $_imagine, $_title, $_priceOnCent);
+        $this->type = $type;
+        $this->size = $size;
+
+    }
+}
+
+class Accessory extends Products {
+    public $type;
+    public $size;
+
+    function __construct(String $type, String $size, String $_category, String $_imagine, String $_title, Int $_priceOnCent){
+        parent ::__construct($_category, $_imagine, $_title, $_priceOnCent);
+        $this->type = $type;
+        $this->size = $size;
+
+    }
 }
