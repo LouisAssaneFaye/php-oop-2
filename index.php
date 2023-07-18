@@ -3,22 +3,22 @@
 include_once __DIR__ . '/classes/Products.php';
 
 $catFood = new Food('food', 500 ,'<i class="fa-solid fa-cat"></i>', 'https://www.focus.it/images/2021/02/22/gatto_1020x680.jpg', 'purina One cat',
-$price= new price(5,50));
+['10,50']);
 
 $dogFood = new Food('food', 700, '<i class="fa-solid fa-dog"></i>', 'https://www.zoo-service.it/wp-content/uploads/2019/01/carattere-dei-cani.jpg.webp', 'purina One dog',
-$price= new price(7,50));
+['15,50']);
 
 $dogAccessory = new Accessory('kennel', 'big', '<i class="fa-solid fa-dog"></i>', 'https://www.perilcane.it/3730-large_default/cuccia-coibentata-termica-per-cani-modello-comfort.jpg', 'Best Kennel',
-$price= new price(40,90));
+['20,55']);
 
 $catAccessory = new Accessory('bed for cat', 'medium', '<i class="fa-solid fa-cat"></i>', 'https://www.minellisrl.eu/1110-large_default/cuccia-per-gatto-in-vimini-con-cuscino-simple-day.jpg', 'bed of your cat',
-$price= new price(15,75));
+['18,50']);
 
 $dogToy = new Toy('game', 'medium', '<i class="fa-solid fa-dog"></i>', 'https://www.epocaitalpigeon.com/8850-large_default/tucano-gioco-osso-colorato-gomma-dura-per-cane-tg-l-22-cm-arancione-fluo.jpg', 'bones',
-$price= new price(8,20));
+['5,50']);
 
 $catToy = new Toy('game', 'small' , '<i class="fa-solid fa-cat"></i>', 'https://onlypets.it/2163-thickbox_default/giochi-gatto-mix-col-blu-ferribiella.jpg', 'little mouse',
-$price= new price(5,50));
+['2,50']);
 
 $products=[
     $catFood,
@@ -69,7 +69,10 @@ $products=[
                     <span>
                        Price on dollar:
                     </span>
-                    <?php echo "$product->price" ?>
+                    <?php foreach ($product->price as $singlePrice){
+                        echo "$singlePrice";
+                    }
+                    ?>
                 </p>
 
             </div>

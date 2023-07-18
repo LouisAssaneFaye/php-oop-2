@@ -7,7 +7,7 @@ class Products{
     public $title;
     public $price;
 
-    function __construct($_category, $_imagine, $_title, $_price ){
+    function __construct(String $_category, String $_imagine, String $_title, Array $_price=[] ){
         $this->category = $_category;
         $this->imagine = $_imagine;
         $this->title = $_title;
@@ -26,19 +26,6 @@ class Products{
         return $this->title;
     }
 
-    public function getPrice(){
-        return $this->price;
-    }
-
-}
-
-class price{
-    public $dollar;
-    public $cent;
-    function __constructor(Int $_dollar, Int $_cent){
-        $this->dollar=$_dollar;
-        $this->cent=$_cent;
-    }
 }
 
 class Food extends Products {
